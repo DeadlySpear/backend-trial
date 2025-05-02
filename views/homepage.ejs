@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h2><a href="/">An App</a></h2>
+      <nav>
+        <a href="/login">Log in</a>
+      </nav>
+  </header>
+
+  <main>
+    <h3>YOO! Welcome to the home page</h3>
+    <% errors.forEach(error => { %>
+      <p=class="notice"><%= error %></p>
+    <% }) %>
+    <fieldset>
+      <legend>Sign up</legend>
+      <form action="/register" method="POST">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        <button type="submit">Sign up</button>
+      </form>
+  </main>
+  <footer><small>&copy; Copyrighted 2024</small></footer>
+</body>
+</html>
